@@ -44,7 +44,16 @@
   "repository": "ljl/generator-es-6-angular",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "gulp",
+    "debug-gulp": "iron-node node_modules/gulp/bin/gulp.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "eslintConfig": {
+  "globals": {
+    "window": true
+  },
+    "parserOptions": {
+        "ecmaVersion": 6
+    }
+}
 }

@@ -1,9 +1,6 @@
 'use strict';
-//Require dependencies
+// Require dependencies
 var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
-
 
 module.exports = yeoman.generators.Base.extend({
   prompting: function () {
@@ -14,7 +11,7 @@ module.exports = yeoman.generators.Base.extend({
       message: 'Your project name',
       default: this.appname
     }, function (answers) {
-      this.props = answers
+      this.props = answers;
       this.log(answers.name);
       done();
     }.bind(this));
@@ -22,7 +19,7 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     config: function () {
-      console.log("Writing stuff");
+      console.log('Writing stuff');
       // Copy config files
       this.fs.copyTpl(
         this.templatePath('_package.json'),
@@ -105,8 +102,6 @@ module.exports = yeoman.generators.Base.extend({
         }
       );
 
-
-
       // Copy styles
       this.fs.copyTpl(
         this.templatePath('_src/_style/_main.scss'),
@@ -130,7 +125,6 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
   install: function () {
-    console.log("Installing dependencies");
     this.installDependencies();
   }
 });

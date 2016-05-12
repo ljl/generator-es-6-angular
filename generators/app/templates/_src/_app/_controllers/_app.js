@@ -2,7 +2,7 @@ export default class AppCtrl {
   constructor($scope, Api) {
     $scope.appName = '<%= name %>';
 
-    Api.listUsers().then((result) => {
+    Api.listUsers().then(result => {
       console.log(result.data);
     });
 

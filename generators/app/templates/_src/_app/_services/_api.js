@@ -1,4 +1,4 @@
-export default ($http) => {
+export default $http => {
   const apiUri = 'http://localhost:3000/api';
   return {
     listUsers() {
